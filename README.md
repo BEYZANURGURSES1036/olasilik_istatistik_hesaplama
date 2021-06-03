@@ -1,1 +1,1 @@
-# olas-l-k_istatistik_hesaplama
+# olasilik_istatistik_hesaplama
