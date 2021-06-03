@@ -1,0 +1,38 @@
+<html>
+<head>
+<meta charset="utf-8">
+		<title>Aritmetik Ortalama Hesaplama</title>
+		<style>
+			body{
+				text-align: center;
+				background-color: #b0e2ff;
+			}
+			a:visited {
+      		background-color: transparent;
+      		text-decoration: none;
+    		}
+		</style>
+</head>
+<body>
+	<h1>Aritmetik Ortalama Hesaplama</h1>
+	<p>Aritmetik ortalama, bir sayı dizisindeki elemanların toplamının eleman sayısına bölünmesidir.</p>
+		<input type="text" id="sayi" placeholder="Sayılarınızı girin."><br><br>
+		<input type="button" value="Hesapla" onclick="Hesapla()"><br><br><br><br>
+<script>
+		function Hesapla(){
+			var string = document.getElementById('sayi').value;
+			var  array = string.split(',');
+			var toplam=0;
+			var i;
+			
+			for (i=0; i<array.length; i++)
+			{
+				toplam = toplam + Number(array[i]);
+			}
+			var ortalama=toplam/(array.length);
+			window.alert("Sayıların ortalaması "+ortalama.toFixed(3)+"'dir.");
+		}
+</script>
+<a href=index.html>ANA SAYFA </a>
+</body>
+</html>

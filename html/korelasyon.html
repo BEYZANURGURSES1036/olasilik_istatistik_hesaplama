@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Korelasyon Katsayısı Hesaplama</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: #b0e2ff;
+        }
+        a:visited {
+            background-color: transparent;
+            text-decoration: none;
+        }
+        form{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body> 
+    <h1>Korelasyon Hesaplama</h1><br>
+    <p>Korelasyon, iki değişken arasında doğrusal bir ilişki olup olmadığını gösterir.
+         Yani değişkelerde meydana gelen değişikliklerin birbirini etkileyip etkilemediklerini gösterir.
+        Korelasyon katsayısı, değişkenler arasındaki ilişkiyi göstermek için kullanılan bir değerdir.
+         Değişken, aşağıdaki formülle hesaplandığında -1 ile 1 arasında bir değer alır. 
+         Negatif değerler negatif ilişkiyi, pozitif değerler ise pozitif ilişki olduğunu gösterir. 
+         Değerler 1 veya -1 olduğunda mükemmel bir ilişki vardır.
+         Değerler 0'a yaklaştıklarında değişkenlerin aralarındaki ilişki de azalır.</p><br><br>
+         <img src="korelasyon.jpg"><br><br>
+         <form>
+             
+    x değerleri: <input type="text" id="xler" placeholder="Sayılarınızı girin."><br><br>
+    y değerleri: <input type="text" id="yler" placeholder="Sayılarınızı girin."><br><br>
+    <input type="button" value="Hesapla" id="hesapla" onclick="Hesapla()"><br>
+         </form>
+</body>
+<script>
+    function Hesapla(){
+		var xlerstring = document.getElementById('xler').value;
+        var  xarray = xlerstring.split(',');
+
+		var ylerstring = document.getElementById('yler').value;
+        var  yarray = ylerstring.split(',');
+
+    var i, carpim = 0,
+        toplam = 0,
+        sayitoplam = 0,
+        sayi1toplam = 0,
+        carpim1 = 0,
+        paysonuc = 0,
+        xkare = 0,
+        xkaretoplam = 0,
+        xtoplamkare = 0,
+        a = 0,
+        ykare = 0,
+        ykaretoplam = 0,
+        ytoplamkare = 0,
+        b = 0,
+        paydasonuc = 0,
+        korelasyon = 0,
+        sonuc1 = 0,
+        sonuc2 = 0;
+
+
+    for (i = 0; i < xarray.length; i++) {
+        carpim = Number(xarray[i]) * Number(yarray[i]) ;
+        toplam = toplam + carpim;
+        sayitoplam = sayitoplam + Number(xarray[i]);
+        sayi1toplam = sayi1toplam + Number(yarray[i]);
+        carpim1 = (sayitoplam * sayi1toplam) / xarray.length;
+        paysonuc = toplam - carpim1;
+
+        xkare = Number(xarray[i]) * Number(xarray[i]);
+        xkaretoplam += xkare;
+        xtoplamkare = Math.pow(sayitoplam, 2);
+        sonuc1 = (xtoplamkare / xarray.length);
+        a = (xkaretoplam - sonuc1);
+
+        ykare = Number(yarray[i]) * Number(yarray[i]);
+        ykaretoplam += ykare;
+        ytoplamkare = Math.pow(sayi1toplam, 2);
+        sonuc2 = (ytoplamkare / yarray.length);
+        b = (ykaretoplam - sonuc2);
+
+        paydasonuc = Math.sqrt(a * b);
+
+        korelasyon = (paysonuc / paydasonuc);
+    }
+    window.alert("Sonuç: " + korelasyon);
+}
+</script>
+<a href=index.html>ANA SAYFA </a>    
+</html>
