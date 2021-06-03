@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometrik Ortalama Hesaplama</title>
+    <style>
+        body{
+            background-color:#b0e2ff;
+            text-align: center;
+        }
+        input{
+            border-radius: 4px;
+             } 
+        form{
+            font-size: 20px;
+            font-weight: 700;
+             
+        }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Geometrik Ortalama Hesaplama</h1><br><br>
+    <p>Verilerin birbiriyle çarpımının veri sayısı derecesinden köküne eşittir.</p><br><br>
+    <img src="geometrik.PNG" width="550" height="100"><br><br>
+    <form>
+        <input type="text" id="ElemanSayi"/><br><br>
+        <input type="button" onclick="hesapla()" value="Hesapla"/>
+    </form>
+    <script>
+        function hesapla(){
+        var string = document.getElementById('ElemanSayi').value;
+        var  dizi = string.split(',');
+        var carpim=1;
+        for(var i = 0; i < dizi.length; i++){
+        carpim *= dizi[i];
+        }
+   var geometrikOrtalama = Math.pow(carpim,1.0/dizi.length); 
+   alert(geometrikOrtalama.toFixed(3));
+    }
+</script><br/><br/>
+<a href=index.html>ANA SAYFA </a>
+</body>
+</html>

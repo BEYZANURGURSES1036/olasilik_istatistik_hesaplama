@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesaplamalar</title>
+    <style>
+        body{
+            background-color: #b0e2ff;
+            text-align: center;
+        }
+        input{
+            border-radius: 4px;
+             } 
+        form{
+            font-size: 20px;
+            font-weight: 700;
+             }
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>   
+    <h1>Medyan (Ortanca) Hesaplama</h1><br><br>
+    <p>Medyan, sayısal veri serisi küçükten büyüğe sıralandığında ortada kalan sayı olarak adlandırılır.</p><br><br>
+<form>
+    Elemanlar<br><br>
+    <input type="text" id="ElemanSayi"><br><br>
+    <input type="button"  value="Hesapla" onclick="hesapla()">
+</form>
+<script>
+    function hesapla()
+    {
+        var string = document.getElementById('ElemanSayi').value;
+            var  liste = string.split(',');
+        liste.sort(function(a,b){return a - b});
+                if(liste.length % 2 != 0){
+                    var eleman=((liste.length + 1)/2)-1;
+                    var ortancaeleman=liste[eleman];          
+                    alert(ortancaeleman.toFixed(3));
+                }
+                else{
+                   var ortanca1=Number(liste[(liste.length)/2]);
+                   var ortanca2=Number(liste[((liste.length)/2)-1]);
+                   var ortancaeleman1=((ortanca1+ortanca2)/2);
+                   alert(ortancaeleman1.toFixed(3));
+                }
+    }
+</script><br/><br/><br/>
+<a href=index.html>ANA SAYFA </a>
+</body>
+</html>
+
