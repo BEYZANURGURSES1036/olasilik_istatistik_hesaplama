@@ -3,7 +3,7 @@
   Uygulamaya [buradan](http://istatistikhesaplama.coolpage.biz/) erişebilirsiniz.
 
 ## Projenin Amacı
-Olasılık istatistik hesaplaması yapan web uygulaması geliştirmek. 
+Olasılık istatistik hesaplaması yapan açık kaynak kodlu web uygulaması geliştirmek. 
     
 ## Projede kullanılan teknolojiler
  - HTML
