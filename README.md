@@ -39,11 +39,11 @@ Bu projede 19 tane hesaplama yapılmaktadır. Bunlar ;
  
      
 ## Ekip Üyeleri
->**Beyzanur GÜRSES**
+>**[Beyzanur GÜRSES](https://github.com/BEYZANURGURSES1036)**
 
->**Elanur BAŞARAN**
+>**[Elanur BAŞARAN](https://github.com/Elanur7)**
 
->**Nazlı Tuğba GÜRSOY**
+>**[Nazlı Tuğba GÜRSOY](https://github.com/nzligursoy)**
 
             
     
